@@ -154,17 +154,18 @@ USE_TZ = True
 
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     # Other directories if any
-    os.path.join(BASE_DIR, 'static'),
+    # os.path.join(BASE_DIR, 'static'),
+     BASE_DIR,"static"
 ]
 
 # Set STATIC_ROOT to a temporary directory for deployment process
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_temp')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_temp')
 
 
 
