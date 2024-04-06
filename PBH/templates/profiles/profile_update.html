@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Update Profile</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- Previous Phone Number -->
+            <div class="form-group">
+                <label for="phone_number">Previous Phone Number:</label>
+                <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Enter previous Phone No">
+            </div>
+            <!-- Submit Button -->
+            <br>
+            <br>
+            <!-- Profile Fields -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ profile.name }}">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" value="{{ profile.age }}">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender">
+                    <option value="" disabled selected>Select</option>
+                    <option value="male" {% if profile.gender == 'male' %} selected {% endif %}>Male</option>
+                    <option value="female" {% if profile.gender == 'female' %} selected {% endif %}>Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location" value="{{ profile.location }}">
+            </div>
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <input type="text" class="form-control" id="profession" name="profession" value="{{ profile.profession }}">
+            </div>
+            <div class="form-group">
+                <label for="contact_number">Contact Number:</label>
+                <input type="text" class="form-control" id="contact_number" name="contact_number" value="{{ profile.contact_number }}">
+            </div>
+            <div class="form-group">
+                <label for="instagram_id">Instagram ID:</label>
+                <input type="text" class="form-control" id="instagram_id" name="instagram_id" value="{{ profile.instagram_id }}">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

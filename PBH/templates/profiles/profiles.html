@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for profile cards */
+        .profile-card {
+            height: 100%;
+        }
+        .profile-image {
+            width: 100%;
+            height: 200px; /* Adjust the height as needed */
+            object-fit: contain; /* Zoom out the image to fit within the container */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Profiles</h2>
+    <div class="row">
+        {% for profile in profiles %}
+        <div class="col-md-4 mb-4">
+            <div class="card profile-card">
+                {% if profile.image %}
+                <img src="{{ profile.image.url }}" class="card-img-top profile-image" alt="{{ profile.name }}">
+                {% else %}
+                <div class="text-center py-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zM8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                    </svg>
+                </div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ profile.name }}</h5>
+                    <p class="card-text">Age: {{ profile.age }}</p>
+                    <p class="card-text">Gender: {{ profile.gender }}</p>
+                    <p class="card-text">Location: {{ profile.location }}</p>
+                    <p class="card-text">Profession: {{ profile.profession }}</p>
+                    <p class="card-text">Contact Number: {{ profile.contact_number }}</p>
+                    <p class="card-text">Instagram ID: {{ profile.instagram_id }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

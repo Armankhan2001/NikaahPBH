@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,7 +16,8 @@
         
     <nav class="navbar bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <img src="pngwing.com (4).png" alt="" style="width: 100px; height: 100px; background-color: rgb(49, 50, 26) ;border-radius:47px; padding: 5px;margin: 6px;">
+        <img src="{% static 'admin/img/lobo1.png' %}" alt="" style="width: 100px; height: 100px; background-color: rgb(49, 50, 26) ;border-radius:47px; padding: 5px;margin: 6px;">
+
         <a style="font-weight: larger;font-family: cursive;" class="navbar-brand" href="#">Nikaah PBH</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -28,7 +30,7 @@
           <div class="offcanvas-body" >
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
               </li>
               <li class="nav-item">
                 <a   class="nav-link " href="http://127.0.0.1:8000/profiles/" type="radio">Profiles </a>
@@ -39,7 +41,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="http://127.0.0.1:8000/create-profile/">Add Profile</a></li>
-                  <li><a class="dropdown-item" href="http://127.0.0.1:8000/profiles/<int:profile_id>/">Edit Profile</a></li>
+                  <li><a class="dropdown-item" href="http://127.0.0.1:8000/update-profile/">Edit Profile</a></li>
                   <li><a class="dropdown-item" href="#">Change Phone Number</a></li>
                   <li>
                     <hr class="dropdown-divider">
@@ -48,8 +50,8 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact us.html">About Us</a>
-                <a class="nav-link" href="contact us.html">Contact Us</a>
+                <a class="nav-link" href="http://127.0.0.1:8000/contact_us/">About Us</a>
+                <a class="nav-link" href="http://127.0.0.1:8000/contact_us/">Contact Us</a>
               </li>
             </ul>
             <form class="d-flex mt-3" role="search">
@@ -75,21 +77,21 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="utsman-media-gp_veO5Otm0-unsplash.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" alt="...">
+          <img src="{%static '/admin/img/carousel1.jpg'%}" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <!-- <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p> -->
           </div>
         </div>
         <div class="carousel-item">
-          <img src="ben-rosett-RBouLnm0L0Q-unsplash.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" alt="...">
+          <img src="{%static '/admin/img/carousel2.jpg'%}" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <!-- <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p> -->
           </div>
         </div>
         <div class="carousel-item">
-          <img src="webding.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" alt="...">
+          <img src="{%static '/admin/img/carousel3.jpg'%}" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <!-- <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p> -->
@@ -111,6 +113,15 @@
           <div class="toast-body">
             प्रतापगढ़ शादी वेबसाइट में आपका स्वागत है।.
           </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" fdprocessedid="futuqb"></button>
+        </div>
+      </div>
+      <br>
+      <div class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            दाएं ओर टॉगल पर क्लिक करें ताकि प्रोफ़ाइल देखें और अपनी प्रोफ़ाइल्स जोड़ें।
+        </div>
           <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" fdprocessedid="futuqb"></button>
         </div>
       </div>
@@ -190,7 +201,6 @@
       </div>
     </div>
   
-    
 
     <div class="row mb-2">
       <div class="col-md-6">
@@ -206,7 +216,7 @@
             </a>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <img src="Screenshot_20240401-054732.jpg" class="bd-placeholder-img" width="200" height="250">
+            <img src="{%static '/admin/img/featured1.jpg'%}" class="bd-placeholder-img" width="200" height="250">
           </div>
         </div>
       </div>
@@ -223,7 +233,7 @@
             </a>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <img src="muhammad-shah-zeb-ryOiannoQ3g-unsplash.jpg" class="bd-placeholder-img" width="200" height="250">
+            <img src="{%static '/admin/img/real1.jpg'%}" class="bd-placeholder-img" width="200" height="250">
           </div>
         </div>
       </div>
@@ -318,4 +328,5 @@
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   </body>
-</html>
+</html> 
+
