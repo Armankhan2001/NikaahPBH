@@ -152,32 +152,54 @@ USE_TZ = True
 
 # settings.py
 
+# import os
+
+# # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# STATIC_URL = 'static/'
+
+# STATICFILES_DIRS = [
+#     # Other directories if any
+#     # os.path.join(BASE_DIR, 'static'),
+#      BASE_DIR,"static"
+# ]
+
+# # Set STATIC_ROOT to a temporary directory for deployment process
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_temp')
+
+
+
+
+
+
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 import os
 
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_URL = '/static/'
 
-STATIC_URL = 'static/'
-
+# Additional locations of static files
 STATICFILES_DIRS = [
-    # Other directories if any
-    # os.path.join(BASE_DIR, 'static'),
-     BASE_DIR,"static"
+    os.path.join(BASE_DIR, "static"),
 ]
 
-# Set STATIC_ROOT to a temporary directory for deployment process
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_temp')
+# The directory where Django will collect static files during deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
-
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
+# Media files (uploads, etc.)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
