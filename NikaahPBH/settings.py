@@ -193,7 +193,7 @@ STATICFILES_DIRS = [
 ]
 
 # The directory where Django will collect static files during deployment
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media files (uploads, etc.)
 
