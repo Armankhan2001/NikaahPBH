@@ -165,7 +165,7 @@ STATICFILES_DIRS = [
 ]
 
 # Set STATIC_ROOT to a temporary directory for deployment process
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_temp')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_temp')
 
 
 
