@@ -1,1 +1,1 @@
-  web: gunicorn PBH.wsgi --log-file -
+  web: gunicorn NikaahPBH.wsgi --log-file -
