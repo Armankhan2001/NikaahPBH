@@ -183,33 +183,7 @@ USE_TZ = True
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-# import os
-
-# STATIC_URL = '/static/'
-
-# # Additional locations of static files
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static"),
-# ]
-
-# # The directory where Django will collect static files during deployment
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# # Media files (uploads, etc.)
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# # Default primary key field type
-# # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
 import os
-
-# Define your project's base directory
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
 
@@ -229,4 +203,30 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# import os
+
+# # Define your project's base directory
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# STATIC_URL = '/static/'
+
+# # Additional locations of static files
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+
+# # The directory where Django will collect static files during deployment
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# # Media files (uploads, etc.)
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
