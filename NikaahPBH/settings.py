@@ -183,17 +183,24 @@ USE_TZ = True
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+# import os
+
+# STATIC_URL = '/static/'
+
+# # Additional locations of static files
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+
+# # The directory where Django will collect static files during deployment
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 import os
 
-STATIC_URL = '/static/'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Additional locations of static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-
-# The directory where Django will collect static files during deployment
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Set the STATIC_ROOT to the 'static' directory directly
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Media files (uploads, etc.)
 
