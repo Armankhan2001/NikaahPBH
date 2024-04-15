@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Update Profile</h2>
+        <h2>Update Profile  <a href="{% url 'index' %}" class="btn btn-primary float-right">Home</a></h2>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <!-- Previous Phone Number -->

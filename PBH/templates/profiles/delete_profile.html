@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Data</title>
+</head>
+<body>
+    <div>
+    <h2>Delete Data   </h2>
+        <form method="post" >
+            {% csrf_token %}
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="phone_number" name="phone_number">
+            <button type="submit">Delete Data</button>
+        </form>
+    </div>
+</body>
+</html>
+
+

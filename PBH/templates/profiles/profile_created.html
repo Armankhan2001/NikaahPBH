@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Profile</title>
+    <title>Profile Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for profile details */
+        .profile-details {
+            margin-top: 50px;
+        }
+        .profile-image {
+            max-width: 100%; /* Adjusted for responsiveness */
+            height: 200px; /* Maintain aspect ratio */
+        }
+    </style>
 </head>
 <body>
-    <h2>Profile Created Successfully!</h2>
-<a href="http://127.0.0.1:8000/create-profile/">Create Another Profile</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 profile-details">
+            <h2 class="mb-4 text-center">Profile Created Successfully!</h2>
+            <div class="text-center">
+                <a href="{% url 'index' %}" class="btn btn-primary">Home</a>
+            </div>
+            <img src="{{ profile.image.url }}" alt="{{ profile.image }}" class="profile-image img-fluid mt-4">
+            <p class="mt-4"><strong>Name:</strong> {{ profile.name }}</p>
+            <p><strong>Age:</strong> {{ profile.age }}</p>
+            <p><strong>Gender:</strong> {{ profile.gender }}</p>
+            <p><strong>Location:</strong> {{ profile.location }}</p>
+            <p><strong>Profession:</strong> {{ profile.profession }}</p>
+            <p><strong>Contact Number:</strong> {{ profile.contact_number }}</p>
+            <p><strong>Instagram ID:</strong> {{ profile.instagram_id }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 text-center"> <!-- Added text-center class -->
+    <a href="{% url 'profile_desc' %}" class="btn btn-secondary" id="addMoreDetails">Add More Details</a>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

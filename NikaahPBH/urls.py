@@ -61,7 +61,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 
-from PBH.views import create_profile, profile_created, get_profiles, update_profile, get_profile, index, contact_us
+from PBH.views import create_profile, profile_created, get_profiles, update_profile, get_profile, index, contact_us, back,profile_desc,delete_profile,profile_created,profiledesc_created,dark_mode
 
 urlpatterns = [
     path('', index, name='index'),
@@ -70,8 +70,13 @@ urlpatterns = [
     path('profile-created/', profile_created, name='profile_created'),
     path('update-profile/', update_profile, name='update_profile'),
     path('profiles/', get_profiles, name='get_profiles'),
-    path('profiles/<int:profile_id>/', get_profile, name='get_profile'),
+    path('profiles/<int:profile_id>/', get_profile, name='profiles'),
     path('contact_us/', contact_us, name='contact_us'),
+    path('addprofiledesc/', profile_desc, name='profile_desc'),
+    path('profiledesc-created/<int:profile_id>/', profiledesc_created, name='profiledesc_created'),
+    path('delete_profile/',delete_profile, name='delete_profile'),
+    path('back/', back, name='back'),
+    path('darkmode/', dark_mode, name='dark_mode'),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
