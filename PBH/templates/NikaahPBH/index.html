@@ -53,7 +53,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{%url 'contact_us'%}">About Us</a>
+                <a class="nav-link" href="{%url 'about_us'%}">About Us</a>
                 <a class="nav-link" href="{%url 'contact_us'%}">Contact Us</a>
                 <a class="nav-link" href="{%url 'dark_mode'%}">Dark Mode</a>
               </li>
@@ -115,7 +115,7 @@
       <div class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
           <div class="toast-body">
-            प्रतापगढ़ शादी वेबसाइट में आपका स्वागत है।.
+            Welcome !  आपका स्वागत है।.
           </div>
           <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" fdprocessedid="futuqb"></button>
         </div>
@@ -129,6 +129,7 @@
           <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" fdprocessedid="futuqb"></button>
         </div>
       </div>
+      <br><br>
 
 
   <main class="container">
@@ -136,7 +137,7 @@
       <div class="col-lg-6 px-0">
         <h1 class="display-4 fst-italic">Welcome to NikaahPBH</h1>
         <p class="lead my-3">Find your perfect partner for a lifetime of happiness. Our platform is dedicated to helping you find your soulmate. Explore thousands of profiles and start your journey towards a blessed union.</p>
-        <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Start your journey...</a></p>
+        <p class="lead mb-0"><a href="{%url 'create_profile'%}" class="text-body-emphasis fw-bold">Start your journey...</a></p>
       </div>
     </div>
   
@@ -149,7 +150,7 @@
             <h3 class="mb-0">Featured Profiles</h3>
             <div class="mb-1 text-body-secondary">Find your match today</div>
             <p class="card-text mb-auto">Explore our featured profiles to discover potential matches. Each profile is carefully curated to ensure compatibility and authenticity.</p>
-            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            <a href="{%url 'get_profiles'%}" class="icon-link gap-1 icon-link-hover stretched-link">
               Explore profiles
               <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
             </a>
@@ -202,12 +203,12 @@
           <p>Don't miss out on the opportunity to connect with like-minded individuals seeking meaningful relationships.</p>
           <h3>Ready to Start Your Journey?</h3>
           <p>Join NikaahPBH today and begin your quest for love and companionship. Create your profile now and let destiny take its course.</p>
-          <pre><code>Example code block</code></pre>
+          <pre><code>"""""""""</code></pre>
         </article>
   
         <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+          <a class="btn btn-outline-primary rounded-pill" href="{% url 'contact_us'%}">Contact Us</a>
+          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Recent</a>
         </nav>
   
       </div>
@@ -224,7 +225,7 @@
             <ul class="list-unstyled">
               <li>
                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                  <img src="{%static '/admin/img/featured2.jpg'%}" class="bd-placeholder-img" width="100%" height="96" >
                   <div class="col-lg-8">
                     <h6 class="mb-0">NikaahPBH Success Story: A Journey to Everlasting Love</h6>
                     <small class="text-body-secondary">April 1, 2024</small>
@@ -233,7 +234,7 @@
               </li>
               <li>
                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                  <img src="{%static '/admin/img/featured3.jpg'%}" class="bd-placeholder-img" width="100%" height="96">
                   <div class="col-lg-8">
                     <h6 class="mb-0">Celebrating Love: NikaahPBH's Success Stories</h6>
                     <small class="text-body-secondary">March 30, 2024</small>

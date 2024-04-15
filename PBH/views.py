@@ -47,7 +47,10 @@ def get_profiles(request):
 
 def contact_us(request):
     # profiles = Profile.objects.all()
-    return render(request, 'NikaahPBH/contact_us.html')
+    return render(request, 'profiles/contact_us.html')
+def about_us(request):
+    # profiles = Profile.objects.all()
+    return render(request, 'NikaahPBH/about_us.html')
 
 
 
